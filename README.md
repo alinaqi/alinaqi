@@ -28,7 +28,7 @@ Alongside open source, I lead engineering at three companies:
 
 **End-to-End AI Marketing Agents** — CTO of an AI-native marketing platform. Full pipeline of autonomous agents — marketing strategy, brief generation, campaign execution, creative production (img.ly integration), and performance analytics. Multi-agent architecture with specialized agents for each stage. Frontend in Svelte + React, backend in FastAPI + Python, deployed serverless.
 
-**AI-Powered Learning & Transformation Platform** — Technical co-founder of an ed-tech platform with a suite of AI products: synthetic interviews, knowledge sprints, educational podcasts (EduCasts), on-the-go micro-learning (EduOTG), AI chat tutoring (EduChat), content forge (EduForge), onboarding companion (OnBuddy), and a full transformation suite for organizational change. Simulation agents, ITSM process automation, and a unified platform serving it all.
+**AI-Powered Learning & Transformation Platform** — Technical co-founder of an ed-tech platform with a suite of AI products: synthetic interviews, knowledge sprints, AI-generated podcasts, micro-learning, chat-based tutoring, content generation, onboarding companions, and a full transformation suite for organizational change. Simulation agents, ITSM process automation, and a unified platform serving it all.
 
 ---
 
