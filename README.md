@@ -1,6 +1,8 @@
 ## Hey, I'm Ali.
 
-I'm a Head of Engineering based in Berlin. I build things at the intersection of AI and product — from autonomous agents that manage engineering teams, to voice bots that handle real phone calls, to developer tools that make Claude Code actually useful in production.
+**Applying AI to push boundaries.**
+
+CTO based in Berlin. I build things at the intersection of AI and product — autonomous agents that manage engineering teams, voice bots that handle real phone calls, developer tools that make Claude Code actually useful in production.
 
 I ship fast, open source a lot, and believe the best software is built by small teams with high leverage.
 
@@ -22,7 +24,7 @@ I ship fast, open source a lot, and believe the best software is built by small 
 
 Alongside open source, I lead engineering at three companies:
 
-**Enterprise CX Platform** — Head of Engineering for a customer experience platform processing millions of survey responses. I manage the full stack: backend services, frontend apps, Shopify integrations, and a migration from legacy to a modern multi-tenant architecture. Multi-provider integrations (Salesforce, HubSpot, Intercom). Team of engineers across backend, frontend, and DevOps.
+**Enterprise CX Platform** — CTO of a customer experience platform processing millions of survey responses. I manage the full stack: backend services, frontend apps, Shopify integrations, and a migration from legacy to a modern multi-tenant architecture. Multi-provider integrations (Salesforce, HubSpot, Intercom). Team of engineers across backend, frontend, and DevOps.
 
 **AI-Powered Professional Networking Tool** — Building an AI-driven platform that automates professional outreach at scale. Personalized messaging, lead scoring, campaign management — all powered by LLMs that understand context and relationships.
 
