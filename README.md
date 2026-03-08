@@ -26,9 +26,9 @@ Alongside open source, I lead engineering at three companies:
 
 **Enterprise CX Platform** — CTO of a customer experience platform processing millions of survey responses. I manage the full stack: backend services, frontend apps, Shopify integrations, and a migration from legacy to a modern multi-tenant architecture. Multi-provider integrations (Salesforce, HubSpot, Intercom). Team of engineers across backend, frontend, and DevOps.
 
-**AI-Powered Professional Networking Tool** — Building an AI-driven platform that automates professional outreach at scale. Personalized messaging, lead scoring, campaign management — all powered by LLMs that understand context and relationships.
+**End-to-End AI Marketing Agents** — CTO of an AI-native marketing platform. Full pipeline of autonomous agents — marketing strategy, brief generation, campaign execution, creative production (img.ly integration), and performance analytics. Multi-agent architecture with specialized agents for each stage. Frontend in Svelte + React, backend in FastAPI + Python, deployed serverless.
 
-**Educational Content Platform** — Technical co-founder of an ed-tech platform delivering bite-sized learning experiences. AI-generated content, adaptive learning paths, and engagement optimization.
+**AI-Powered Learning & Transformation Platform** — Technical co-founder of an ed-tech platform with a suite of AI products: synthetic interviews, knowledge sprints, educational podcasts (EduCasts), on-the-go micro-learning (EduOTG), AI chat tutoring (EduChat), content forge (EduForge), onboarding companion (OnBuddy), and a full transformation suite for organizational change. Simulation agents, ITSM process automation, and a unified platform serving it all.
 
 ---
 
