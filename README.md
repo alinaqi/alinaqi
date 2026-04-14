@@ -22,13 +22,13 @@ I ship fast, open source a lot, and believe the best software is built by small 
 
 ### Private work
 
-Alongside open source, I lead engineering at three companies:
+Alongside open source, I have previously worked on...
 
-**Enterprise CX Platform** — CTO of a customer experience platform processing millions of survey responses. I manage the full stack: backend services, frontend apps, Shopify integrations, and a migration from legacy to a modern multi-tenant architecture. Multi-provider integrations (Salesforce, HubSpot, Intercom). Team of engineers across backend, frontend, and DevOps.
+**Enterprise CX Platform** — a customer experience platform processing millions of survey responses. I manage the full stack: backend services, frontend apps, Shopify integrations, and a migration from legacy to a modern multi-tenant architecture. Multi-provider integrations (Salesforce, HubSpot, Intercom). Team of engineers across backend, frontend, and DevOps.
 
-**End-to-End AI Marketing Agents** — CTO of an AI-native marketing platform built around a fully autonomous AI agent that controls the entire system. The agent runs campaigns end-to-end: strategy, brief co-creation, content generation, creative production, and analytics — all via streaming chat, autopilot mode, or proactive nudges. It conducts interviews and outreach over email, WhatsApp (@-mention driven), and live voice meetings with real-time turn-taking and TTS. Multi-agent architecture with hired sub-agents per brand, automated email cadences, MCP integrations (HubSpot, Salesforce, Google Ads, social platforms), and a full copilot toolkit with tools, skills, and context-aware planning.
+**End-to-End AI Marketing Agents** — an AI-native marketing platform built around a fully autonomous AI agent that controls the entire system. The agent runs campaigns end-to-end: strategy, brief co-creation, content generation, creative production, and analytics — all via streaming chat, autopilot mode, or proactive nudges. It conducts interviews and outreach over email, WhatsApp (@-mention driven), and live voice meetings with real-time turn-taking and TTS. Multi-agent architecture with hired sub-agents per brand, automated email cadences, MCP integrations (HubSpot, Salesforce, Google Ads, social platforms), and a full copilot toolkit with tools, skills, and context-aware planning.
 
-**AI-Powered Learning & Transformation Platform** — Technical co-founder of an ed-tech platform with a suite of AI products: synthetic interviews, knowledge sprints, AI-generated podcasts, micro-learning, chat-based tutoring, content generation, onboarding companions, and a full transformation suite for organizational change. Simulation agents, ITSM process automation, and a unified platform serving it all.
+**AI-Powered Learning & Transformation Platform** — an ed-tech platform with a suite of AI products: synthetic interviews, knowledge sprints, AI-generated podcasts, micro-learning, chat-based tutoring, content generation, onboarding companions, and a full transformation suite for organizational change. Simulation agents, ITSM process automation, and a unified platform serving it all.
 
 ---
 
