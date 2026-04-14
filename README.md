@@ -22,7 +22,7 @@ I ship fast, open source a lot, and believe the best software is built by small 
 
 ### Private work
 
-Alongside open source, I have previously worked on...
+Alongside open source, I have worked on...
 
 **Enterprise CX Platform** — a customer experience platform processing millions of survey responses. I managed/contributed to the full stack: backend services, frontend apps, Shopify integrations, and a migration from legacy to a modern multi-tenant architecture. Multi-provider integrations (Salesforce, HubSpot, Intercom). Team of engineers across backend, frontend, and DevOps.
 
