@@ -1,8 +1,4 @@
-# Mnemos
-
-**RFC DRAFT -- APRIL 2026**
-
-## Task-Scoped Memory Lifecycle for Autonomous Agents
+# Mnemos - Task-Scoped Memory Lifecycle for Autonomous Agents
 
 A framework defining how an agent acquires, organizes, compresses, inherits, and hands off knowledge while executing a single task -- from initiation to completion. Primary motivation: preventing premature context crashes in long-running Claude Code sessions and multi-agent task hierarchies. Companion RFC to Engram (cross-session amnesia) and iCPG (code intent memory).
 
