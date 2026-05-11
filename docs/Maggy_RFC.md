@@ -680,53 +680,45 @@ These are complementary to Maggy, not competitive. A developer might use Lovable
 - **Lovable:** Prompt-to-app for non-developers, $6.6B validates the broader market
 - **Aider:** Open-source community (39K stars), architect/editor cost optimization
 
-## 11. Migration Roadmap
+## 11. Release Status
 
-### Phase Dependencies
+All phases described in the original migration roadmap have been implemented and shipped as [claude-bootstrap](https://github.com/alinaqi/claude-bootstrap).
 
-```
-Phase 1: PiAdapter + Token Budget -----------------------+
-    |                                                    |
-    +-- Phase 2: Model Routing (blast->model)            |
-    +-- Phase 3: Mnemos Multi-Model Fatigue              |
-    +-- Phase 6: Dual-Model Planning                     |
-    |                                                    |
-Phase 4: CIKG Extract ----------------+                  |
-    |                                 |                  |
-    +----------+----------------------+                  |
-               |                                         |
-Phase 5: Maggy v2 Dashboard <----------------------------+
-    |
-    +-- Phase 7: Vercel Deploy Containers (Docker)
-    +-- Phase 8: Process Intelligence --------+
-    +-- Phase 9: MCP Forge                    |
-    |                                         |
-    +-- Phase 11: Maggy Mesh <----------------+
-                                              |
-Phase 10: Integration Testing <---------------+
-                                              |
-Phase 3 + Phase 5 --> Phase 12: Engram -------+
-                                     |
-Phase 9 + Phase 12 -> Phase 13: Lexon
-```
+### What Shipped
 
-### Phase Summary
+| Phase | What | Status |
+| --- | --- | --- |
+| 1 | PiAdapter + token budget | Shipped |
+| 2 | Model routing (blast->model) | Shipped |
+| 3 | Mnemos multi-model fatigue | Shipped |
+| 4 | CIKG extraction | Shipped |
+| 5 | Maggy v2 dashboard | Shipped |
+| 6 | Dual-model planning | Shipped |
+| 7 | Deploy containers (Docker) | Shipped |
+| 8 | Process intelligence | Shipped |
+| 9 | MCP Forge | Shipped |
+| 10 | Integration testing + docs | Shipped |
+| 11 | Maggy Mesh (P2P) | Shipped |
+| 12 | Engram (cross-session memory) | Shipped |
+| 13 | Lexon (semantic tool binding) | Shipped |
 
-| Phase | What | Priority | Effort | Dependencies |
-| --- | --- | --- | --- | --- |
-| 1 | PiAdapter + token budget | P0 | Large | Pi installed |
-| 2 | Model routing (blast->model) | P0 | Medium | Phase 1 + iCPG |
-| 3 | Mnemos multi-model fatigue | P1 | Medium | Phase 1 |
-| 4 | CIKG extraction | P1 | Medium | Supabase |
-| 5 | Maggy v2 dashboard | P0 | Large | Phases 1-4 |
-| 6 | Dual-model planning | P2 | Medium | Phase 1 |
-| 7 | Vercel deploy containers | P2 | Medium | Docker |
-| 8 | Process intelligence | P1 | Large | Phase 5 + GitHub API |
-| 9 | MCP Forge | P2 | Large | Phase 5 |
-| 10 | Integration testing + docs | P1 | Large | All phases |
-| 11 | Maggy Mesh (P2P) | P2 | XL | Phase 5 + Phase 8 |
-| 12 | Engram (cross-session memory) | P1 | Large | Phase 3 + Phase 5 |
-| 13 | Lexon (semantic tool binding) | P2 | Large | Phase 9 + Phase 12 |
+### Shipped Components
+
+- **Model routing** -- Multi-model orchestration with budget management, fallback chains, and learned routing rules
+- **Mnemos** -- Task-scoped memory lifecycle with typed MnemoGraph, fatigue detection, and checkpoint/resume
+- **Engram** -- Cross-session memory with EngramRecord encoding
+- **Lexon** -- Semantic tool binding with adaptive personalization
+- **iCPG** -- Intent-augmented code property graph with blast radius scoring and drift detection
+- **Maggy Mesh** -- P2P team intelligence via coordination layer
+- **Process intelligence** -- CI/PR/deploy signal learning
+- **Event Spine** -- Unified event bus connecting all subsystems
+- **MCP Forge** -- Capability expansion framework
+- **Polyphony** -- Container-isolated multi-agent orchestration
+- **Cross-agent delegation** -- Complexity-based task routing to Codex, Kimi, etc.
+- **60+ skills** -- Markdown-based instruction sets covering TDD, security, agentic development, and more
+- **19 slash commands** -- CLI commands for iCPG, Mnemos, Polyphony, Maggy, and workspace management
+- **Behavioral evals** -- Test framework for skill effectiveness
+- **Skill-lint** -- Quality gates for skill files
 
 ## 12. Research Foundations & Prior Art
 
@@ -807,23 +799,9 @@ The AI coding tool market is at an inflection point:
 ### Installation
 
 ```bash
-git clone https://github.com/alinaqi/maggy.git
-cd maggy
+git clone https://github.com/alinaqi/claude-bootstrap.git
+cd claude-bootstrap
 ./install.sh
 ```
 
-### Current State (v4.0)
-
-Today, Maggy includes:
-
-- **Skills system** -- Markdown-based instructions for AI agents (TDD, security, iCPG, Mnemos, etc.)
-- **Polyphony** -- Container-isolated multi-agent orchestration (173 tests, 14 modules)
-- **iCPG** -- Intent-augmented code property graph with blast radius scoring
-- **Mnemos** -- Task-scoped memory lifecycle with typed MnemoGraph
-- **Cross-agent delegation** -- Complexity-based task routing to Codex, Kimi, etc.
-- **Skill-lint** -- Quality gates for skill files
-- **Behavioral evals** -- Test framework for skill effectiveness
-
-### Roadmap to v5.0
-
-The 11-phase migration path takes Maggy from a single-project, single-model toolkit to the multi-project, multi-model, self-improving, team-learning platform described in this RFC.
+The full Maggy platform -- multi-model orchestration, self-improving closed-loop control, process intelligence, team learning via Mesh, and the complete iCPG/Mnemos/Engram/Lexon cognitive stack -- is available and ready to use.
