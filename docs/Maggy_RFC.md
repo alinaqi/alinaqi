@@ -1,6 +1,6 @@
 # Maggy: An Autonomous AI Engineering Agent
 
-> **Released:** The foundational scaffolding that powers Maggy is available as open source at [claude-bootstrap](https://github.com/alinaqi/claude-bootstrap).
+> **Released:** Maggy is available as open source at [claude-bootstrap](https://github.com/alinaqi/claude-bootstrap).
 
 ## 1. Executive Summary
 
