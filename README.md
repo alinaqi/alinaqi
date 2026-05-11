@@ -10,7 +10,7 @@ I ship fast, open source a lot, and believe the best software is built by small 
 
 ### Research Papers
 
-I write RFC-style research papers on the hard problems in agentic AI — memory, intent, tool selection, and autonomous engineering. These come from building production agents, not from theory.
+Here is some of my work on hard problems in agentic AI — memory, intent, tool selection, and autonomous engineering. These come from building production agents, not from theory.
 
 | Paper | Topic | Summary |
 |-------|-------|---------|
