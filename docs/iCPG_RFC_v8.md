@@ -1,12 +1,9 @@
-# iCPG
+# iCPG - Intent-Augmented Code Property Graph
 
-## Intent-Augmented Code Property Graph
 
-**RFC DRAFT -- MARCH 2026 -- V8 -- REVISED AFTER PEER REVIEW**
+*Reason Graph for Agentic Software Development*
 
-*Also framed as: Reason Graph for Agentic Software Development*
-
-> A proposed infrastructure layer for agentic coding systems -- Claude Code, Lovable, Bolt, and similar -- that makes intent formally specifiable, specification drift continuously detectable, and agent accountability traceable. Grounded in a live legacy migration (zenloop v1 to v2). Validation in progress.
+> An infrastructure layer for agentic coding systems -- Claude Code, Lovable, Bolt, and similar -- that makes intent formally specifiable, specification drift continuously detectable, and agent accountability traceable. Grounded in a live legacy migration (zenloop v1 to v2). Validation in progress.
 
 ## Version History
 
