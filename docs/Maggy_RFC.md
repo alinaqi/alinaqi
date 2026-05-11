@@ -57,7 +57,7 @@ Maggy does all of this. It's the first AI platform designed around the full soft
               +------------+------------+
               |    ORCHESTRATOR LAYER   |
               |                        |
-              |  Pi Agent (universal   |
+              |  [Pi](https://pi.dev) Agent (universal   |
               |  harness, RPC mode)    |
               |                        |
               |  Token Budget Manager  |
@@ -77,8 +77,8 @@ Maggy does all of this. It's the first AI platform designed around the full soft
    +----+--------------+--------------+----+
    |         INTELLIGENCE LAYER            |
    |                                       |
-   |  iCPG -- blast radius, drift, intent  |
-   |  Mnemos -- memory, fatigue, checkpts  |
+   |  [iCPG](iCPG_RFC_v8.md) -- blast radius, drift, intent  |
+   |  [Mnemos](Mnemos_RFC_v1.md) -- memory, fatigue, checkpts  |
    |  codebase-memory-mcp -- code graph    |
    |  CIKG -- competitive intelligence     |
    |  Process Intelligence -- CI/PR/deploy |
@@ -87,9 +87,9 @@ Maggy does all of this. It's the first AI platform designed around the full soft
    +---------------------------------------+
 ```
 
-### Pi: The Universal Agent Harness
+### [Pi](https://pi.dev): The Universal Agent Harness
 
-Pi replaces per-CLI adapters with a single interface to every model. It runs inside Polyphony containers in RPC mode over stdin/stdout. The same PiAdapter code controls Claude, gpt-5, Gemini, Kimi, DeepSeek, or a local Qwen -- with identical tool interfaces.
+[Pi](https://pi.dev) replaces per-CLI adapters with a single interface to every model. It runs inside Polyphony containers in RPC mode over stdin/stdout. The same [Pi](https://pi.dev)Adapter code controls Claude, gpt-5, Gemini, Kimi, DeepSeek, or a local Qwen -- with identical tool interfaces.
 
 **Model fallback chain:**
 
@@ -99,7 +99,7 @@ Claude -> gpt-5 -> Gemini -> Kimi -> DeepSeek -> Qwen (local, unlimited)
 
 When a model hits quota or rate limits:
 
-1. Mnemos writes a structured checkpoint (goal, constraints, progress, state)
+1. [Mnemos](Mnemos_RFC_v1.md) writes a structured checkpoint (goal, constraints, progress, state)
 2. Pi switches to the next model
 3. The checkpoint is injected as context
 4. The new model verifies it understands the task before continuing
@@ -203,13 +203,13 @@ The pattern engine correlates (code_pattern, review_feedback) pairs:
 
 This is not prompt engineering. This is autonomous process optimization -- Maggy observed a pattern, validated it statistically, and changed its behavior to prevent the issue. No human told it to.
 
-## 6. Engram: Cross-Session Memory
+## 6. [Engram](Engram_RFC_v3.md): Cross-Session Memory
 
 ### The Amnesia Problem
 
 Every AI coding tool today is an amnesiac. When a session ends, everything the agent learned -- project conventions, reviewer preferences, codebase idioms, tool configurations -- evaporates. The next session starts from scratch. This isn't a minor inconvenience; it's the fundamental bottleneck preventing AI agents from becoming genuinely useful over time.
 
-Engram identifies seven distinct amnesia pathologies:
+[Engram](Engram_RFC_v3.md) identifies seven distinct amnesia pathologies:
 
 | Amnesia Type | What Gets Lost | Impact |
 | --- | --- | --- |
@@ -223,17 +223,17 @@ Engram identifies seven distinct amnesia pathologies:
 
 ### The Memory Lifecycle
 
-Engram completes Maggy's memory stack:
+[Engram](Engram_RFC_v3.md) completes Maggy's memory stack:
 
 ```
-Mnemos (within-task)     -> What the agent remembers during a single task
+[Mnemos](Mnemos_RFC_v1.md) (within-task)     -> What the agent remembers during a single task
      | promote (confidence > 0.8, evidence >= 3)
-Engram (cross-session)   -> What survives between sessions, per machine
+[Engram](Engram_RFC_v3.md) (cross-session)   -> What survives between sessions, per machine
      | distill to typed memory
 Mesh (cross-machine)     -> What's shared across the team, P2P
 ```
 
-Without Engram, Maggy has a 10-minute memory. With Engram, knowledge compounds across every session. After 100 sessions, Maggy knows your project's conventions, your reviewers' preferences, your CI failure patterns -- and applies them automatically.
+Without [Engram](Engram_RFC_v3.md), Maggy has a 10-minute memory. With Engram, knowledge compounds across every session. After 100 sessions, Maggy knows your project's conventions, your reviewers' preferences, your CI failure patterns -- and applies them automatically.
 
 ### Three-Tier Namespace Model
 
@@ -332,7 +332,7 @@ Team Mesh (n peers): knowledge = n x learning_rate x time x sharing_factor
 
 The sharing_factor (0.8) accounts for context mismatch and quarantine filtering. The effect is superlinear because peers validate each other's patterns through crowd confirmation.
 
-## 8. Lexon: Semantic Tool Binding
+## 8. [Lexon](Lexon_RFC_v1.md): Semantic Tool Binding
 
 ### The Tool Overload Problem
 
@@ -342,7 +342,7 @@ A second failure mode persists even with retrieval: the vocabulary gap. Tool des
 
 ### Two-Tier Routing
 
-Lexon solves this with a two-tier pipeline that runs in parallel:
+[Lexon](Lexon_RFC_v1.md) solves this with a two-tier pipeline that runs in parallel:
 
 - **Tier A -- Fast LLM Router (<300ms):** A compact tool manifest (name + 1-line description, ~400 tokens for 80 tools) fed to a fast model. Returns 5-7 candidates with rationale. JSON schema constrained to valid tool names -- no hallucinated tools.
 - **Tier B -- Multilingual Semantic Retriever:** Vector search over the full tool registry, indexed by description, example queries, and learned synonyms. Multilingual embedding model ensures queries in any language match correctly.
@@ -397,7 +397,7 @@ Lexon builds on: RAG-MCP (Anthropic, 2025 -- retrieval-based tool selection), To
 
 ### Why an Event Spine
 
-Maggy's components -- iCPG, Mnemos, Lexon, Engram, Process Intelligence, Mesh -- each generate events in their own formats. Without a canonical event spine, correlating "user said X -> Lexon bound tool Y -> execution failed -> memory Z was created -> mutation W was proposed" requires stitching together six different log formats.
+Maggy's components -- [iCPG](iCPG_RFC_v8.md), [Mnemos](Mnemos_RFC_v1.md), [Lexon](Lexon_RFC_v1.md), [Engram](Engram_RFC_v3.md), Process Intelligence, Mesh -- each generate events in their own formats. Without a canonical event spine, correlating "user said X -> Lexon bound tool Y -> execution failed -> memory Z was created -> mutation W was proposed" requires stitching together six different log formats.
 
 The Event Spine defines a single ordered event stream that every component writes to:
 
@@ -417,7 +417,7 @@ Eight typed events, each carrying a common header (event_id, task_id, project_id
 
 ### The Positioning Statement
 
-> Maggy understands intent through iCPG. Maggy survives task execution through Mnemos. Maggy chooses the right capability through Lexon. Maggy remembers consequences through Engram. Maggy evolves behavior through rewards. Maggy spreads successful mutations through Mesh.
+> Maggy understands intent through [iCPG](iCPG_RFC_v8.md). Maggy survives task execution through [Mnemos](Mnemos_RFC_v1.md). Maggy chooses the right capability through [Lexon](Lexon_RFC_v1.md). Maggy remembers consequences through [Engram](Engram_RFC_v3.md). Maggy evolves behavior through rewards. Maggy spreads successful mutations through Mesh.
 >
 > The Event Spine connects all six into a single typed, correlated, reward-bearing event stream. This is the nervous system of an autonomous engineering agent.
 
@@ -523,7 +523,7 @@ Copilot evolved from autocomplete to a multi-layered platform: inline suggestion
 
 | Capability | Copilot | Maggy |
 | --- | --- | --- |
-| Code completion | Best-in-class inline suggestions | Via Pi (any model) |
+| Code completion | Best-in-class inline suggestions | Via [Pi](https://pi.dev) (any model) |
 | Cloud agent | Yes -- autonomous PRs from issues | Yes -- local containers |
 | Agent mode | IDE-integrated (VS Code, Visual Studio) | CLI + web dashboard |
 | Custom agents | User-level + repo-level definitions | Skills + iCPG + Mnemos |
@@ -582,7 +582,7 @@ Anthropic's terminal-first coding agent. Runs locally, supports multi-agent orch
 
 | Capability | Claude Code | Maggy |
 | --- | --- | --- |
-| Multi-agent | Task tool, teams, SendMessage | Polyphony containers + Pi |
+| Multi-agent | Task tool, teams, SendMessage | Polyphony containers + [Pi](https://pi.dev) |
 | Model | Claude only | 6+ models with auto-routing |
 | IDE integration | VS Code, JetBrains, desktop app | CLI + web dashboard |
 | Hooks | PreToolUse, PostToolUse, Stop | Skills + hooks + L0 real-time |
@@ -705,10 +705,10 @@ All phases described in the original migration roadmap have been implemented and
 ### Shipped Components
 
 - **Model routing** -- Multi-model orchestration with budget management, fallback chains, and learned routing rules
-- **Mnemos** -- Task-scoped memory lifecycle with typed MnemoGraph, fatigue detection, and checkpoint/resume
-- **Engram** -- Cross-session memory with EngramRecord encoding
-- **Lexon** -- Semantic tool binding with adaptive personalization
-- **iCPG** -- Intent-augmented code property graph with blast radius scoring and drift detection
+- **[Mnemos](Mnemos_RFC_v1.md)** -- Task-scoped memory lifecycle with typed MnemoGraph, fatigue detection, and checkpoint/resume
+- **[Engram](Engram_RFC_v3.md)** -- Cross-session memory with EngramRecord encoding
+- **[Lexon](Lexon_RFC_v1.md)** -- Semantic tool binding with adaptive personalization
+- **[iCPG](iCPG_RFC_v8.md)** -- Intent-augmented code property graph with blast radius scoring and drift detection
 - **Maggy Mesh** -- P2P team intelligence via coordination layer
 - **Process intelligence** -- CI/PR/deploy signal learning
 - **Event Spine** -- Unified event bus connecting all subsystems
@@ -804,4 +804,4 @@ cd claude-bootstrap
 ./install.sh
 ```
 
-The full Maggy platform -- multi-model orchestration, self-improving closed-loop control, process intelligence, team learning via Mesh, and the complete iCPG/Mnemos/Engram/Lexon cognitive stack -- is available and ready to use.
+The full Maggy platform -- multi-model orchestration, self-improving closed-loop control, process intelligence, team learning via Mesh, and the complete [iCPG](iCPG_RFC_v8.md)/[Mnemos](Mnemos_RFC_v1.md)/[Engram](Engram_RFC_v3.md)/[Lexon](Lexon_RFC_v1.md) cognitive stack -- is available and ready to use.
