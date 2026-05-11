@@ -6,8 +6,6 @@
 
 > Companion RFC to: **Mnemos** (Task-Scoped Agentic Memory), **iCPG** (Intent Computation Graph), **Engram** (Cross-Session Memory)
 
-**INTERNAL RESEARCH DOCUMENT -- NOT FOR EXTERNAL DISTRIBUTION**
-
 ---
 
 ## Abstract
