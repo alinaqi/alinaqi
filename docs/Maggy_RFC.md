@@ -1,5 +1,7 @@
 # Maggy: An Autonomous AI Engineering Agent
 
+> **Released:** The foundational scaffolding that powers Maggy is available as open source at [claude-bootstrap](https://github.com/alinaqi/claude-bootstrap).
+
 ## 1. Executive Summary
 
 Maggy is a local-first, self-improving AI engineering agent that transforms how development teams build software. Unlike code assistants that wait for prompts, Maggy is an autonomous agent that observes, learns, and optimizes -- continuously improving its own effectiveness across models, workflows, and team knowledge.
