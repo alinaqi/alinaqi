@@ -8,6 +8,22 @@ I ship fast, open source a lot, and believe the best software is built by small 
 
 ---
 
+### Research Papers
+
+I write RFC-style research papers on the hard problems in agentic AI — memory, intent, tool selection, and autonomous engineering. These come from building production agents, not from theory.
+
+| Paper | Topic | Summary |
+|-------|-------|---------|
+| **Engram** (v3, Mar 2026) | Agentic Memory Pathology | A pathology-first framework for diagnosing memory failure in AI agents. Defines an amnesia taxonomy (temporal, source, interference, encoding, retrieval, consolidation, prospective) validated against three production systems: Maia, hive, and Deepak. Introduces the RAG-Amnesia Scale and EngramRecord encoding. |
+| **iCPG** (v8, Mar 2026) | Intent-Augmented Code Property Graph | Reframes a class of coding agent "hallucinations" as specification drift — measurable divergence from intent. Proposes ReasonNodes with formal contracts (preconditions, postconditions, invariants) and 6-dimension drift detection. Grounded in a live legacy migration (zenloop v1 → v2). |
+| **Mnemos** (v1, Apr 2026) | Task-Scoped Agent Memory | A framework for how agents acquire, organize, compress, and hand off knowledge during a single task. Addresses context wall crashes in long-running Claude Code sessions with typed MnemoNodes, a 4-dimension fatigue model, tiered REM consolidation, and SkillNode promotion for reusable patterns. |
+| **Lexon** (v1, Apr 2026) | Semantic Tool Binding | Solves tool selection accuracy collapse at scale. A two-tier routing pipeline with multilingual embeddings, structured disambiguation, and a personalization layer that learns user vocabulary over time. Integrates with Mnemos, iCPG, and Engram to form a complete agentic cognitive stack. |
+| **Maggy** | Autonomous AI Engineering Agent | A local-first, self-improving engineering agent with multi-model orchestration (Claude, GPT-5, Gemini, Kimi, DeepSeek, Qwen), 5-level closed-loop control, process intelligence from CI/PR/deploy signals, and Maggy Mesh — a P2P network for sharing team learning across developer instances. |
+
+These papers form a coherent **Agent Architecture Series**: iCPG governs intent, Mnemos governs task memory, Engram governs cross-session memory, Lexon governs tool resolution, and Maggy orchestrates all of it into an autonomous engineering platform.
+
+---
+
 ### What I'm working on
 
 **Autonomous AI Systems** — Most of my recent work is about making AI agents that actually do real work, not demos. [Zoro](https://github.com/alinaqi/zoro) is an autonomous engineering manager that runs as an iTerm2 extension — it monitors tickets, routes work to Claude Code sessions, detects error loops, and runs a web cockpit for oversight. [claude-bootstrap](https://github.com/alinaqi/claude-bootstrap) (529+ stars) is the opinionated project scaffold I use to make Claude Code reliable across all my projects.
