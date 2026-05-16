@@ -1,6 +1,6 @@
 ## Hey, I'm Ali.
 
-**Applying AI to push boundaries.**
+**Bringing personal super intelligence to every worker in the world.**
 
 CTO based in Berlin. I build things at the intersection of AI and product — autonomous agents that manage engineering teams, voice bots that handle real phone calls, developer tools that make Claude Code actually useful in production.
 
@@ -53,9 +53,11 @@ Alongside open source, I have worked on...
 I wrote a [No-Agile Agile Manifesto](https://github.com/alinaqi/no-agile-agile-manifesto) and an [Organization Consciousness Protocol](https://github.com/alinaqi/ocp) because I think most process is theater. What actually works:
 
 - **Small teams, high autonomy.** One engineer with good tools beats a squad with a Jira board.
-- **AI as a multiplier, not a replacement.** I use Claude Code for ~80% of my implementation. The other 20% is architecture, judgment, and taste.
+- **Multi-model, not single-model.** I don't use one AI — I built a [9-tier routing system](https://github.com/alinaqi/maggy) that classifies every task and delegates to the cheapest capable model. Qwen3 for lookups (~$0), DeepSeek Pro for implementation (~$0.44/M), Kimi for review, Gemini for multimodal and deep research, Codex for bulk generation, Claude for architecture and security. DeepSeek handles ~80% of coding; Claude is reserved for what actually needs judgment. This isn't cost-cutting — it's about using the right tool for the job. Why pay $15/M for a typo fix?
+- **Memory is the moat.** Every AI coding tool loses context on compaction. [Mnemos](docs/Mnemos_RFC_v1.md) doesn't compress blindly — it tracks *why* each memory node exists with typed eviction policies, measures fatigue across 4 dimensions, and writes checkpoints *before* things go wrong. Codex and Claude Code fire-and-forget; Mnemos preserves intent.
+- **Autonomous, not assisted.** [Maggy](https://github.com/alinaqi/maggy) doesn't wait for me to ask. It auto-discovers untested code and generates test suites. Background heartbeats scan competitors and refresh the task inbox. After significant changes, a Stop hook asks qwen3 whether a multi-model review (DeepSeek + Kimi + Codex in parallel) is warranted — and triggers it autonomously. The agent decides when it needs help, not me.
 - **Ship first, abstract later.** Three similar lines of code is better than a premature abstraction.
-- **TDD when it matters.** Tests are a design tool, not a checkbox. I write them first for complex logic, skip them for throwaway scripts.
+- **TDD when it matters.** Tests are a design tool, not a checkbox. But with Maggy's autonomous testing agent, I don't write most tests either — the agent discovers gaps, generates tests, runs them, and classifies failures as test bugs vs code bugs.
 
 ---
 
