@@ -18,9 +18,10 @@ Here is some of my work on hard problems in agentic AI — memory, intent, tool 
 | [**iCPG**](docs/iCPG_RFC_v8.md) (v8, Mar 2026) | Intent-Augmented Code Property Graph | Reframes a class of coding agent "hallucinations" as specification drift — measurable divergence from intent. Proposes ReasonNodes with formal contracts (preconditions, postconditions, invariants) and 6-dimension drift detection. I did it primarily to make claude code work better.  |
 | [**Mnemos**](docs/Mnemos_RFC_v1.md) (v1, Apr 2026) | Task-Scoped Agent Memory | A framework for how agents acquire, organize, compress, and hand off knowledge during a single task. Addresses context wall crashes in long-running Claude Code sessions with typed MnemoNodes, a 4-dimension fatigue model, tiered REM consolidation, and SkillNode promotion for reusable patterns. |
 | [**Lexon**](docs/Lexon_RFC_v1.md) (v1, Apr 2026) | Semantic Tool Binding | Solves tool selection accuracy collapse at scale. A two-tier routing pipeline with multilingual embeddings, structured disambiguation, and a personalization layer that learns user vocabulary over time. Integrates with Mnemos, iCPG, and Engram to form a complete agentic cognitive stack. |
+| [**Telos**](docs/Telos_RFC_v1.1.md) (v1.1, May 2026) | Intent-Grounded Testing | Reframes testing from "does the output match the spec?" to "does the artifact serve the intent?" Models the lossy chain from real intent to behavior, defines 8 intent-failure modes (IF-1 through IF-8), and runs three test planes autonomously — including whether the spec itself is wrong. Cross-references iCPG (intent governance), Engram (cross-session memory), and Polyphony (decomposition closure). Operational layer: DAE (Dynamic Autonomous Evaluation). |
 | [**Maggy**](docs/Maggy_RFC.md) | Autonomous AI Engineering Agent | Released at [claude-bootstrap](https://github.com/alinaqi/claude-bootstrap). A local-first, self-improving engineering agent with multi-model orchestration (Claude, GPT-5, Gemini, Kimi, DeepSeek, Qwen), 5-level closed-loop control, process intelligence from CI/PR/deploy signals, and Maggy Mesh — a P2P network for sharing team learning across developer instances. |
 
-These papers form a coherent **Agent Architecture Series**: iCPG governs intent, Mnemos governs task memory, Engram governs cross-session memory, Lexon governs tool resolution, and Maggy orchestrates all of it into an autonomous engineering platform.
+These papers form a coherent **Agent Architecture Series**: iCPG governs intent in code, Mnemos governs task memory, Engram governs cross-session memory, Lexon governs tool resolution, Telos governs intent-grounded autonomous testing, and Maggy orchestrates all of it into an autonomous engineering platform.
 
 ---
 
@@ -57,7 +58,7 @@ I wrote a [No-Agile Agile Manifesto](https://github.com/alinaqi/no-agile-agile-m
 - **Memory is the moat.** Every AI coding tool loses context on compaction. [Mnemos](docs/Mnemos_RFC_v1.md) doesn't compress blindly — it tracks *why* each memory node exists with typed eviction policies, measures fatigue across 4 dimensions, and writes checkpoints *before* things go wrong. Codex and Claude Code fire-and-forget; Mnemos preserves intent.
 - **Autonomous, not assisted.** [Maggy](https://github.com/alinaqi/maggy) doesn't wait for me to ask. It auto-discovers untested code and generates test suites. Background heartbeats scan competitors and refresh the task inbox. After significant changes, a Stop hook asks qwen3 whether a multi-model review (DeepSeek + Kimi + Codex in parallel) is warranted — and triggers it autonomously. The agent decides when it needs help, not me.
 - **Ship first, abstract later.** Three similar lines of code is better than a premature abstraction.
-- **TDD when it matters.** Tests are a design tool, not a checkbox. But with Maggy's autonomous testing agent, I don't write most tests either — the agent discovers gaps, generates tests, runs them, and classifies failures as test bugs vs code bugs.
+- **Test intent, not just output.** Every testing framework today asks "does the output match the spec?" [Telos](docs/Telos_RFC_v1.1.md) asks a harder question: "does the artifact serve the intent?" A green test suite doesn't mean the spec was right — it means you built the wrong thing correctly. Telos tests the spec itself, scores how much intent survives each translation link, and detects when the tests themselves have been captured by a proxy. Autonomous testing that tests the test.
 
 ---
 
@@ -70,3 +71,4 @@ I wrote a [No-Agile Agile Manifesto](https://github.com/alinaqi/no-agile-agile-m
 <p align="center">
   <a href="https://github.com/alinaqi?tab=repositories&sort=stargazers">repos sorted by stars</a>
 </p>
+
